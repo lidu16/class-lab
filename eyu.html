@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            margin: 40px auto;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        img {
+            width: 120px;
+            border-radius: 50%;
+        }
+
+        button {
+            background: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Profile</h1>
+</header>
+
+<div class="card">
+    <img src="https://via.placeholder.com/120" alt="profile image">
+    <h2>Lidiya Mesenbet</h2>
+    <p>Computer Science Student 💻</p>
+    <p>I love technology, coding, and solving problems.</p>
+
+    <button onclick="showMessage()">Click Me</button>
+</div>
+
+<script>
+    function showMessage() {
+        alert("Welcome to my website!");
+    }
+</script>
+
+</body>
+</html>
