@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="row">
+                <div class="column">
+                    <lable for="fullname">Full Name</lable>
+                    <input type="text" id="fullname" name="fullname">
+                </div>
+                <div class ="column">
+                    <label for="dob">Date of Birth :</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="column">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" value ="+251-912-345678">
+                </div>
+            </div>
+               <div class ="row">
+                <div class="column">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="column">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" style="width: 50;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                  <label>Gender:</label>
+                  <input type="radio" id="male" name="gender" value="male">
+                  
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
