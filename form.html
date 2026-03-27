@@ -46,8 +46,35 @@
                 <div class="column">
                   <label>Gender:</label>
                   <input type="radio" id="male" name="gender" value="male">
-                  
+                  <label for="male">Male</label>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Female</label>
                 </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Courses</legend>
+            <p>Courses Interested:</p>
+            <input type ="checkbox" id="cs" name ="course" value="cs">
+            <label for="cs">Computer Science</label><br>    
+            <input type ="checkbox" id ="is" name="course" value="is">
+            <label for="is">Information Systems</label>
+            <input type ="checkbox" id="se" name="course" value="se">
+            <label for="se">Software Engineering</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend> Other Information</legend>
+            <div class ="row"></div>
+            <div class="column">
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" name="color" value="#000000">
+            </div>
+            <div class="column">
+                <label for="marks">Expected Marks:</label>
+                <input type="range" id="marks" name="marks" min="0" max="100">
+            </div>
             </div>
         </fieldset>
     </form>
