@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+    <title>student registration
+    </title>
+    <style>
+        body {font-family: serif ; padding:20px;}
+        .form-group {margin-bottom:10px}
+        label{margin-bottom:5px;}
+        fieldset {margin-bottom: 20px;border: 1px solid #ccc;}
+        legend {font-weight: bold;}
+        .row {display:flex; flex-wrap:wrap;gap:20px; margin-bottom:10px}
+        .column {display: flex; align-items: center;}
+        textarea {vertical-align: top;}
+    </style>
 </head>
 <body>
     <h1>Student Registration Form</h1>
@@ -68,7 +79,7 @@
             <legend> Other Information</legend>
             <div class ="row"></div>
             <div class="column">
-                <label for="color">Favorite Color:</label>
+                <label for="color">Favorite Color :</label>
                 <input type="color" id="color" name="color" value="#000000">
             </div>
             <div class="column">
@@ -81,8 +92,32 @@
                     <label for="url">Portfolio URL:</label>
                     <input type="url" id="url" name="url" placeholder="https://example.com">
                 </div>
+                <div class="column">
+                    <label for="photo">Upload Photo:</label>
+                    <input type="file" id="photo" name="photo" >
+                </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <lable for ="search">Search Something</lable>
+                        <input type="search" id="search" name="search">
+                    </div>
+                    <div class="column">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name ="address" rows="2" cols="30"></textarea>
+                    </div>
+                    </div>
+                
                 
         </fieldset>
+        <div class="form-group">
+            <button type ="submit">Register</button>
+            <button type ="reset">Reset</button>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <button type ="button">Link to  audio and video</button>
+        </div>
     </form>
     
 </body>
