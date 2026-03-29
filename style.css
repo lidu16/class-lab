@@ -62,7 +62,7 @@
 
     .answers-container{
         display:flex;
-        flex-didrection:column;
+        flex-direction:column;
         gap: 10px;
         margin-bottom: 20px;
     }
@@ -83,19 +83,15 @@
         background-color: #eadbc8;
         border-color: #dac0ae;
     }
-.answer_btn.correct{
+.answer-btn.correct{
     background-color: #e6fff0;
-    border-color: #a3f0c4;\
+    border-color: #a3f0c4;
     color: #28a745 ;
-
-    
 }
-.answer_btn.incorrect{
+.answer-btn.incorrect{
     background-color: #fff0f0;
-    border-color: #ffbdbd;\
+    border-color: #ffbdbd;
     color: #dc3545 ;
-
-    
 }
 
 .progress-bar{
