@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            background: #f4f6f9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #1e293b;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+        .sidebar ul li:hover {
+            color: #38bdf8;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Task Section */
+        .tasks {
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .tasks input {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .tasks button {
+            padding: 10px;
+            background: #38bdf8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tasks ul {
+            margin-top: 15px;
+        }
+
+        .tasks li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="sidebar">
+        <h2>FocusFlow</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Tasks</li>
+            <li>Analytics</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    
+    <div class="main">
+
+        
+        <div class="navbar">
+            <h3>Dashboard</h3>
+            <p>User 👤</p>
+        </div>
+
+    
+        <div class="cards">
+            <div class="card">
+                <h4>Total Tasks</h4>
+                <p>24</p>
+            </div>
+
+            <div class="card">
+                <h4>Completed</h4>
+                <p>18</p>
+            </div>
+
+            <div class="card">
+                <h4>Pending</h4>
+                <p>6</p>
+            </div>
+        </div>
+
+        
+        <div class="tasks">
+            <h3>Add Task</h3>
+
+            <input type="text" id="taskInput" placeholder="Enter task...">
+            <button onclick="addTask()">Add</button>
+
+            <ul id="taskList"></ul>
+        </div>
+
+    </div>
+
+    
+    <script>
+        function addTask() {
+            const input = document.getElementById("taskInput");
+            const taskText = input.value;
+
+            if (taskText === "") return;
+
+            const li = document.createElement("li");
+            li.textContent = taskText;
+
+            document.getElementById("taskList").appendChild(li);
+
+            input.value = " ";
+        }
+    </script>
+
+</body>
+</html>
