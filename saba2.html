@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+
+        .status {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form>
+
+        <!-- Name -->
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <!-- Email -->
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <!-- Password -->
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+
+        <!-- Gender -->
+        <label>Gender</label>
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <button type="button" id="autoUpdateButton">Auto-update counters</button>
+    </form>
+
+    <div class="status">
+        <p id="commitCountText">Local edit counter: 0</p>
+        <p id="infoText">Each push should include this file and count updates.</p>
+    </div>
+</div>
+
+<script>
+    const key = 'saba2_auto_commit_counter';
+    const commitCountText = document.getElementById('commitCountText');
+    const infoText = document.getElementById('infoText');
+
+    function updateCounter(value) {
+        commitCountText.textContent = 'Local edit counter: ' + value;
+        localStorage.setItem(key, value);
+    }
+
+    let count = Number(localStorage.getItem(key) || '0');
+    updateCounter(count);
+
+    document.getElementById('autoUpdateButton').onclick = function () {
+        count += 1;
+        updateCounter(count);
+        infoText.textContent = 'Counter incremented; commit or save to persist to Git.';
+    };
+</script>
+
+</body>
+</html>
