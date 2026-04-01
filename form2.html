@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <table width="100%" border="0">
+                <tr>
+                    <td>Full Name:</td>
+                    <td><input type="text" name="fname"></td>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email"></td>
+                    <td>Phone Number:</td>
+                    <td><input type="tel" name="phone" value="+251-912-345678"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="pass"></td>
+                    <td>Age:</td>
+                    <td><input type="number" name="age"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td colspan="3">
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Courses</legend>
+            <p>Courses Interested:</p>
+            <input type="checkbox" name="course" value="cs"> Computer Science
+            <input type="checkbox" name="course" value="is"> Information Science
+            <input type="checkbox" name="course" value="se"> Software Engineering
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Other Information</legend>
+            <table width="100%" border="0">
+                <tr>
+                    <td>Favorite Color:</td>
+                    <td><input type="color" name="favcolor"></td>
+                    <td>Expected Marks:</td>
+                    <td><input type="range" name="marks" min="0" max="100"></td>
+                </tr>
+                <tr>
+                    <td>Portfolio URL:</td>
+                    <td><input type="url" name="url" value="https://example.com"></td>
+                    <td>Upload Photo:</td>
+                    <td><input type="file" name="photo"></td>
+                </tr>
+                <tr>
+                    <td>Search Something:</td>
+                    <td><input type="search" name="search"></td>
+                    <td>Address:</td>
+                    <td><textarea name="address" rows="2" cols="30"></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+        
+        <br><br>
+        <button type="button">Link to audio and video</button>
+    </form>
+
+</body>
+</html>
